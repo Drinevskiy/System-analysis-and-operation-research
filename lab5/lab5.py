@@ -79,7 +79,6 @@ class FordFulkerson:
         return None, marked_X
 
     def solve(self):
-        print(f"Исток: {self.s}, Сток: {self.t}")
         iteration = 1
         while True:
             print(f"\n=== Итерация {iteration} ===")
@@ -110,7 +109,7 @@ class FordFulkerson:
             iteration += 1
 
         max_flow = self.graph.get_flow_value(self.s)
-        print(f"Максимальный поток: {max_flow}")
+        print(f"\nМаксимальный поток: {max_flow}")
         print("Распределение потоков по дугам:")
         for key, edge in self.graph.edges.items():
             print(f"  {edge}")
